@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col items-center justify-start h-screen bg-center  bg-cover bg-repeat overflow-x-hidden text-white' style={{ backgroundImage: 'url("/static/images/cs-cup-poster.jpg")' }}>
+      <div className='flex flex-col items-center justify-start h-screen bg-center  bg-cover bg-repeat overflow-x-auto text-white' style={{ backgroundImage: 'url("/static/images/cs-cup-poster.jpg")' }}>
       <div className='p-5'>
           <h1 className='font-["calvera"] text-6xl md:text-8xl underline underline-offset-8'>
             CS CUP

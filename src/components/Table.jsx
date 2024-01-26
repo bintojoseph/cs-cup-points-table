@@ -15,8 +15,9 @@ export default function Table() {
             cs26,
             cs25,
             cs24,
-            pg
-          }`
+            pg,
+            _createdAt,
+          }| order(_createdAt asc)`
       );
       console.log(result)
       setTabledata(result);
@@ -30,34 +31,6 @@ export default function Table() {
   }
   
 
-  const data = useMemo(() => tabledata, []);
-
-  const columns = [
-    {
-      header: "EVENT NAME",
-      accessorKey: "event",
-    },
-    {
-      header: "CSE 27",
-      accessorKey: "cs27",
-    },
-    {
-      header: "CSE 26",
-      accessorKey: "cs26",
-    },
-    {
-      header: "CSE 25",
-      accessorKey: "cs25",
-    },
-    {
-      header: "CSE 24",
-      accessorKey: "cs24",
-    },
-    {
-      header: "PG",
-      accessorKey: "pg",
-    },
-  ];
 
   return (
     <div className="bg-purple-900/70 h-fit w-fit rounded-lg p-3 md:p-7">
@@ -75,7 +48,7 @@ export default function Table() {
         <tbody className="divide-y divide-gray-200">
             {tabledata.map((item) => {
                 return(
-                    <tr key={item.id}>
+                    <tr key={item.id} className="">
                         <td className="px-6 py-4">{item.event}</td>
                         <td>{item.cs27}</td>
                         <td>{item.cs26}</td>
@@ -84,8 +57,9 @@ export default function Table() {
                         <td>{item.pg}</td>
                     </tr>
             )})}
-            <tr>
-                <td className="px-6 py-4">
+            
+            <tr className="  text-yellow-300">
+                <td className="px-6 py-4 ">
                     Total
                 </td>
                 <td>{getTotal('cs27')}</td>
