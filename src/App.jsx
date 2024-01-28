@@ -1,6 +1,8 @@
-
+import "./App.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import {client} from '../config'
 import Table from './components/Table'
+import Winner from './components/Winner'
 import Test from './components/Test'
 
 import './App.css'
@@ -14,11 +16,16 @@ function App() {
           <h1 className='font-["calvera"] text-6xl md:text-8xl underline underline-offset-8'>
             CS CUP
           </h1>
-          <h3 className='p-5 text-2xl text-center font-["calvera"]'>
+          <h3 className='mt-3 p-5 text-2xl text-center font-["calvera"]'>
             POINTS TABLE
           </h3>
         </div>
         <Table/>
+        <h3 className='p-5 text-2xl text-center font-["calvera"]'>
+           WINNERS
+        </h3>
+      <Winner/>
+
       </div>
       
     </>
