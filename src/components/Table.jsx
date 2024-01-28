@@ -42,24 +42,24 @@ export default function Table() {
             <th className="px-1 md:pr-5 text-left py-3">CSE26</th>
             <th className="px-1 md:pr-5 text-left py-3">CSE25</th>
             <th className="px-1 md:pr-5 text-left py-3">CSE24</th>
-            <th className="px-1 md:pr-5 text-left py-3">PG</th>
+            <th className="px-1 md:pl-3 md:pr-5 text-left py-3">PG</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
             {tabledata.map((item) => {
                 return(
-                    <tr key={item.id} className="">
-                        <td className="px-6 py-4">{item.event}</td>
+                    <tr key={item.id} className=" text-center">
+                        <td className="px-6 py-4 text-left">{item.event}</td>
                         <td>{item.cs27}</td>
                         <td>{item.cs26}</td>
                         <td>{item.cs25}</td>
                         <td>{item.cs24}</td>
-                        <td>{item.pg}</td>
+                        <td className="">{item.pg}</td>
                     </tr>
             )})}
             
-            <tr className="  text-yellow-300">
-                <td className="px-6 py-4 ">
+            <tr className="  text-yellow-300 text-center">
+                <td className="px-6 py-4 text-left">
                     Total
                 </td>
                 <td>{getTotal('cs27')}</td>
