@@ -27,7 +27,7 @@ export default function Table() {
 
   const getTotal = (colName) => {
     return tabledata.reduce((sum,row) => sum +
-    (row[colName] || 0),0);
+    ((row[colName] > 0 ? row[colName]:0) || 0),0);
   }
   
 
@@ -50,11 +50,11 @@ export default function Table() {
                 return(
                     <tr key={item.id} className=" text-center">
                         <td className="px-6 py-4 text-left">{item.event}</td>
-                        <td>{item.cs27}</td>
-                        <td>{item.cs26}</td>
-                        <td>{item.cs25}</td>
-                        <td>{item.cs24}</td>
-                        <td className="">{item.pg}</td>
+                        <td>{item.cs27 < 0 ? "-" :item.cs27}</td>
+                        <td>{item.cs26 < 0 ? "-" :item.cs26}</td>
+                        <td>{item.cs25 < 0 ? "-" :item.cs25}</td>
+                        <td>{item.cs24 < 0 ? "-" :item.cs24}</td>
+                        <td className="">{item.pg < 0 ? "-" :item.pg}</td>
                     </tr>
             )})}
             
