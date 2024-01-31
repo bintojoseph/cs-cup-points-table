@@ -2,9 +2,9 @@ import Posts from "./Posts";
 
 const images = [
     // links
-    // "https://i.ibb.co/2d4cW4q/1.png",
-    // "https://i.ibb.co/2d4cW4q/2.png",
-    // "https://i.ibb.co/2d4cW4q/3.png",
+    "https://i.ibb.co/2d4cW4q/1.png",
+    "https://i.ibb.co/2d4cW4q/2.png",
+    "https://i.ibb.co/2d4cW4q/3.png",
   ];
 
 function Winner() {
