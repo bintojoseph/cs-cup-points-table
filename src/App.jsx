@@ -21,7 +21,7 @@ function App() {
           </h3>
         </div>
         <Table/>
-        <h3 className='p-5 text-2xl text-center font-["calvera"]'>
+        <h3 className='p-5 text-3xl text-center font-["calvera"] mt-5'>
            WINNERS
         </h3>
       <Winner/>
