@@ -5,6 +5,9 @@ const images = [
     "/static/images/e_football.jpg",
     "/static/images/tabletennis.jpg",
     "/static/images/tabletennisw.jpg",
+    "/static/images/pushup.jpg",
+    "/static/images/wrestlingm.jpg",
+    "/static/images/wrestlingf.jpg",
   ];
 
 function Winner() {

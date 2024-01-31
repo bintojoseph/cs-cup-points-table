@@ -38,15 +38,15 @@ const Posts = (images) => {
   };
 
   return (
-    <div className="w-3/4 mx-4 mb-10">
+    <div className="w-3/4 mx-4 mb-10  bg-purple-700/70 rounded ">
 
       <Slider {...settings}>
         {[...Array(val)].map((_, index) => (
-          <div key={index} className="slide">
+          <div key={index} className="slide ">
             <img
               src={images.images[index]} // Replace with actual image paths
               alt={`Image ${index + 1}`}
-              className="w-full h-1/4 rounded-xl shadow-lg p-3"
+              className="w-full h-1/4 rounded-xl p-3"
             />
           </div>
         ))}
